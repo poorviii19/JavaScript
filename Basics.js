@@ -27,6 +27,8 @@
 // * and / have same precedence as well as +  and - have same rule => follows from left to right in direction
 // 2*3/4= > 6/4 because of the above rule
 //if we use (),[].{}, preferece will be given to brackets first than other operations
+
+
 console.log(2.45*67+5);
 console.log((20.95+7.99*2)*0.1);
 
@@ -34,7 +36,7 @@ console.log(0.1+0.2);  //it will not give 0.3 exactly because computers process 
 
 // to avoid float problem:
 //calculate in sets
-console.log((2095+799)/100);
+console.log((2095+799)/100);  //best practice if you are calculating for money and want to avoid floating problem
 
 // Math.round():
 
@@ -44,3 +46,60 @@ let y =Math.round(2.756);
 console.log(x);
 console.log(y);
 
+
+//string: concatenation
+let str = 'some'+'text';
+console.log(str);
+
+let str1 = str+'more'
+console.log(str1);
+
+
+//typeof Operator:
+let A = typeof(2);
+console.log(A);
+
+let B = typeof('hello');
+console.log(B);
+
+let C = typeof('hello'+3);   //automatic type conversion to string 
+console.log(C);
+
+
+// '$'+20.25+7.99 //wrong method to calculate two numbers if attaching with string
+// '$'+(20.25+7.99) //right method
+
+
+let D = '$'+(20.25+7.99);
+console.log(D);
+
+let cart = 'Items (' +(1+1)+'):  $'+ (2025+799)/100;
+console.log(cart);
+
+
+// 3 ways of craeting stringd:
+//way1
+let string = 'Hello'; //use mostly
+
+//way2
+let string1 = "hello world";  //useful when we have single quote inside a string
+let string2 = "I'm learning JS";
+
+// using escape characters inside single quote 
+let string3 = 'I\'m learning JS';   //escape character  \' creates single quote just text  \n newlinw haracter  \" creates double quote just text 
+ 
+//way-3
+let string4 = `using baccktick`  //template strings : interpolation: insert value directly into string
+let example = `Items (${1+1}):  $${(2025+799)/100}`
+console.log(string);
+console.log(string1);
+console.log(string2);
+console.log(string3);
+console.log(string4);
+console.log(example);
+
+//template strings: multiline strings:
+let multiStr =  `Some
+text
+is here`
+console.log(multiStr);
