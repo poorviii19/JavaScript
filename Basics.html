@@ -13,6 +13,7 @@
             color: white;
             border: none;
         }
+		/* uses for comments in css */ 
 
         /* what if we want to change the single tag  not all eg. only one <button> tag 
             not all then use html attribute and css selectors  */
@@ -69,11 +70,30 @@
      <!-- tooltip: shows additional information when hovered over -->
 </button>
 
- <button class = "green-button">
+ <button class = "green-button"
+ onclick = "
+ alert('Good Job')"> <!--inline JS-->
    
      Hello
    
 </button>
+
+<script>
+	// internal JS
+
+	//uses for single line comments in js
+	/*for Multi line comments in js*/ 
+
+	//code in script element runs first and code in inline js runs later
+
+	alert('Hello');  //this  code creates popup
+
+	//comments in every language are use for not usig pparticular lines
+	//  of code or to write documentation within code
+
+	console.log(5);
+	console.log('Hello '+'World');
+</script>
 
 </body>
 </html>
