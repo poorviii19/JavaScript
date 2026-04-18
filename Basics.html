@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* internal CSS */
+        button{     /* CSS selector (there are many others as well)  tells which element to change*/
+            /*css styling*/
+            background-color: red;  /* CSS property: css value*/
+            /* changes color of all buttons to red */
+            color: white;
+            border: none;
+        }
+
+        /* what if we want to change the single tag  not all eg. only one <button> tag 
+            not all then use html attribute and css selectors  */
+            .yellow-button{   
+                /* class selector */
+                 background-color: yellow;
+                 color: black;
+                border: none;
+            }
+            .green-button{   
+                /* class selector */
+                 background-color: green;
+                color: white;
+                border: none;
+            }
+    </style>
+</head>
+<body>
+    <!-- Basics of html and css knowledge for you to understand and to use with JS
+     HTML: creates content/structure
+     CSS: styles the content/structure -> Inline CSS, Internal CSS, External CSS
+     JavaScript: adds interactivity to the content/structure, -> Inline JS, Internal JS, External JS -->
+
+     <!-- HTML: HyperText Markup Language
+      gives instructions to the browser on how to display the content
+       -->
+      <!-- this is use to comment -->  
+      <button>
+        Hello
+    </button> <!--creates button--> 
+
+      <p>
+        craetes paragraph of 
+        <!--nesting-->
+        <button>
+            hello
+        </button> 
+        text
+    </p>   <!-- HTML Tag: <p> -> opening tag </p> closing tag and HTMl element:
+      <p> content </p> whole together is called element-->
+    <!-- In html multiple spaces are combined as single space as well newline is also consider as single space -->
+     <!-- for spaces use &nbsp; and for new line use <br></br> tag -->
+
+     <!-- web page: a single page(on a website)
+      (homepage, cartpage, etc) together is called website
+       -->
+
+       <!-- CSS: Cascading Style Sheeets : changes appearance-->
+
+<!-- attribute changes the behaviour of element: always put attribue in opening tag: attribute name="attribute value" -->
+ <button title="tooltip" class = "yellow-button">
+    <!-- class helps in labelling the html tag -->
+     This is a button with a tooltip attribute
+     <!-- tooltip: shows additional information when hovered over -->
+</button>
+
+ <button class = "green-button">
+   
+     Hello
+   
+</button>
+
+</body>
+</html>
