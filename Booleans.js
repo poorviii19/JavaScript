@@ -78,3 +78,23 @@ else if(age>=16){
 else{
     console.log("you are not eligible!");
 }
+
+
+// Logical Operators: have lower priority than both mathematical and comparator operators
+
+//&& logical and
+
+console.log(true && false);  //false because both sides are not true
+console.log(true && true); //true because both sides are true
+
+console.log(0.2>=0 && 0.2<1/3)
+
+
+// || logical or
+console.log(true||false); //true because atleast one condition is true
+
+
+// ! logical not
+
+console.log(!true); //flips the value  output will be false
+console.log(!false); //flips the value  output will be true
