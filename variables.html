@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <!-- Variable is like a container to store values.
+     Syntax rules for variable:
+
+     -> let, const, var creates a new variable and then we assign it a name.
+     -> name restriction:
+     -> Can't use special words/keywords:  Example: let
+     -> Can't start a cariable name with a number, but can use in middle or in end
+     -> Cant use special characters except $ and _
+
+     -> = value: to store or to assign somethin ginside variable
+
+     -> ;  end of an instruction
+
+     -> but at last js inserts / assume ; automatically, so we do not mandatorily need ; in last 
+    -->
+
+      <script>
+        //let, const and var are identifiers:
+        let variable1 = 33;  //assigning a value to a variable
+        console.log(variable1);  //33
+
+        let calculation = 2+2;
+        console.log(calculation);  //4
+
+        console.log(calculation+calculation*2);  //12
+
+
+        let result = calculation+2;  //substitution
+        console.log(result);
+
+
+        let message = "Hello there, I'm Poorvi";
+        console.log(message);
+
+
+        variable1 = 45;  //reassignment -> rules: dont use the identifier, because we can't name a variable with existing name.
+        console.log(variable1);
+
+
+        variable1 = 23;  //multiple reassignment is possible;
+        console.log(variable1);
+      </script>
+     
+</body>
+</html>
