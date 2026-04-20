@@ -64,6 +64,9 @@ calculator(num1, num2, operator);
 // console.log() → just displays output
 // return → gives the result back, making your function reusable
 //we can return anything that results into a value
+
+//within a scope after return statement nothing else gets execute
+// returning variable is preferred to be a global variable
 function findMax(a, b) {
     if (a > b) {
         return a;
