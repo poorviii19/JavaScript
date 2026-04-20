@@ -58,3 +58,24 @@ function calculator(num1, num2, operator) {
 
 calculator(num1, num2, operator);
 
+
+
+//return statement:
+// console.log() → just displays output
+// return → gives the result back, making your function reusable
+//we can return anything that results into a value
+function findMax(a, b) {
+    if (a > b) {
+        return a;
+    }
+    return b;
+}
+
+let max = findMax(10, 25);
+console.log("Max value:", max);
+
+function toFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+console.log(toFahrenheit(25)); // 77
