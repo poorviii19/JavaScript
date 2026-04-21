@@ -29,7 +29,14 @@ console.log(typeof product);
 
 const product2 = {
     name:'shirt',
-    ['delivery-time']: '1 day'  //brackets here are just optional
+    ['delivery-time']: '1 day',  //brackets here are just optional
+    rating:{  //nested objects, because object itself is also a value 
+        stars: 4.5,
+        count: 87
+    },
+    fun: function fun1(){  //method->because function is just an another type of a value
+        console.log("function inside an object");  //console is an object that is provided by js and log is a function that is inside console.
+    }
 }
 console.log(product2);
 console.log(product2.name);
@@ -39,3 +46,18 @@ console.log(product2['name']);  //bracket notation
 console.log(product2['delivery-time']);
 
 //we usually use . notation by default
+
+//access nested onjects:
+console.log(product2.rating);
+console.log(product2.rating.stars);
+console.log(product2.rating.count);
+console.log(product2['rating']);
+console.log(product2['rating']['stars']);
+console.log(product2['rating']['count']);
+
+product2.fun();  //to access fucntion inside an object
+console.log(typeof console);  //object
+console.log(typeof console.log);  //function
+console.log(typeof Math.random);  //fucntion
+console.log(typeof Math); //object
+console.log(typeof Math.random()); //number
