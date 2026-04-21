@@ -1,25 +1,24 @@
-const score = {
+// Get score from localStorage or initialize
+let score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,
     losses: 0,
     ties: 0
-}
+};
+
+console.log(score);
 
 function playGame(userChoice) {
 
     let computer = '';
     const randomNumber = Math.random();
 
-    if (randomNumber >= 0 && randomNumber < 1/3) {
+    if (randomNumber < 1/3) {
         computer = 'rock';
-    } 
-    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+    } else if (randomNumber < 2/3) {
         computer = 'paper';
-    } 
-    else {
+    } else {
         computer = 'scissors';
     }
-
-    console.log(computer);
 
     let result = '';
 
@@ -37,16 +36,26 @@ function playGame(userChoice) {
         result = 'You lose.';
     }
 
-    if(result === "You win!"){
-        score.wins = score.wins+1;
-    }
-    else if(result === "You loose."){
-        score.losses = score.losses+1;
-    }
-    else if(resut === "Tie"){
-        score.ties = score.ties+1;
+    // Update score
+    if (result === "You win!") {
+        score.wins++;
+    } 
+    else if (result === "You lose.") {
+        score.losses++;
+    } 
+    else if (result === "Tie.") {
+        score.ties++;
     }
 
+    // Save to localStorage
+    localStorage.setItem('score', JSON.stringify(score));
+
     alert(`You picked ${userChoice}. Computer picked ${computer}. ${result}
-        wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+}
+
+// Reset function
+function resetScore() {
+    score = { wins: 0, losses: 0, ties: 0 };
+    localStorage.setItem('score', JSON.stringify(score));
 }
