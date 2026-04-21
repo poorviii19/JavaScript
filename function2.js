@@ -20,3 +20,25 @@ function calculate(tax = 5){  //default value
     console.log(tax*4);
 }
 calculate();
+
+function canDrive(age){
+    if(age>=18){
+        console.log("You can drive");
+    }
+    else{
+        console.log("You cannot drive");
+    }
+}
+canDrive(42);
+
+
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // Hello, Alice!
+
+function multiply(a, b = 2) {
+  return a * b;
+}
+console.log(multiply(5));    // 10
+console.log(multiply(5, 3)); // 15
