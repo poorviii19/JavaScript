@@ -1,3 +1,9 @@
+const score = {
+    wins: 0,
+    losses: 0,
+    ties: 0
+}
+
 function playGame(userChoice) {
 
     let computer = '';
@@ -31,5 +37,16 @@ function playGame(userChoice) {
         result = 'You lose.';
     }
 
-    alert(`You picked ${userChoice}. Computer picked ${computer}. ${result}`);
+    if(result === "You win!"){
+        score.wins = score.wins+1;
+    }
+    else if(result === "You loose."){
+        score.losses = score.losses+1;
+    }
+    else if(resut === "Tie"){
+        score.ties = score.ties+1;
+    }
+
+    alert(`You picked ${userChoice}. Computer picked ${computer}. ${result}
+        wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 }
