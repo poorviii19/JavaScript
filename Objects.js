@@ -25,3 +25,17 @@ console.log(typeof product);
 // why objects?
 // ->make the code more organized
 //allow us to use multiple values together
+
+
+const product2 = {
+    name:'shirt',
+    ['delivery-time']: '1 day'  //brackets here are just optional
+}
+console.log(product2);
+console.log(product2.name);
+//another way to access objects:
+console.log(product2['name']);  //bracket notation
+// console.log(product2.delivery-time) in order to use properties like this whichincludes - we use [] bracket notation
+console.log(product2['delivery-time']);
+
+//we usually use . notation by default
