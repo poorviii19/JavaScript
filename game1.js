@@ -57,5 +57,4 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 // Reset function
 function resetScore() {
     score = { wins: 0, losses: 0, ties: 0 };
-    localStorage.setItem('score', JSON.stringify(score));
 }

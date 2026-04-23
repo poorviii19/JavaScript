@@ -92,3 +92,36 @@ console.log(JSON.parse(jsonString));
 // localStorage.getItem()
 
 //local storage only supports stings
+
+
+// AutoBoxing: automatically wraps the string in  special object and this special object has some properties
+// AutoBNoxing also works with other values like number and booleans but not works with null and undefined
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+console.log('HELLO'.toLowerCase());
+
+// Objects are references:
+const object1 = {
+    message: "hello"
+};
+
+//object1 is a reference to the actual value in computer's memory.
+
+const object2 = object1; //doesnot make the copy of actual value but it makes the copy of reference -> copy by reference
+console.log(object1);
+console.log(object2);
+
+object1.message = 'Good Job';
+console.log(object1);
+console.log(object2);
+
+// const prevents us from changing the reference int he variable, 
+// but it does not prevent us from reaching into the reference and changing the object that is pointeng to
+// we can't compare objects directly: because objects are references
+
+const object3 = {
+    message: 'Good Job'
+}
+
+console.log(object3 === object1); //compares reference
+console.log(object2 === object1); //compares reference
