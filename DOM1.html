@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <!-- DOM: Document object model -->
+    <button>Hello</button>
+    <button class = "hi">Hi</button>
+
+    <script>
+
+        console.log(document.title);
+
+        //property1: document.title:
+        document.title = 'Changed';  //changes the title
+        console.log(document.title);
+
+        //propert2: document.body:
+        console.log(document.body);  //we can have html elements inside js, DOM combines js and html together and gives control to js
+        console.log(typeof document.body);  //object
+
+        console.log(document.body.innerHTML); //controls all the html inside body
+
+        // document.body.innerHTML = 'Changed';
+
+        // document.body.innerHTML = '<button>Good Job</button>'  //removes previous html and place this new one
+
+
+        //method: function saved inside an object:
+
+        // 1)document.querySelector()  -> lets us get any element from our page and put it inside js
+
+        console.log(document.querySelector('button')); //will get the first button element from our page
+        console.log(document.querySelector('button')
+            .innerHTML); //will get the html inside element button
+
+        document.querySelector('button').innerHTML = 'changed';
+
+        //to access same elements use attribute class or id selectors
+
+        document.querySelector('.hi')
+        .innerHTML = "Hiiii";
+
+
+        /*// DOM = another butil in object called document object
+        document.body.innerHTML = 'hello';  //it will remove everything from page and shows hello
+        document.title = 'good job';
+
+        //document object is linked to web page, document object also has methods
+
+        every html element has a propert ->  .innerHTML, which lets us control the html inside the element
+        */
+
+
+
+    </script>
+    
+</body>
+</html>
