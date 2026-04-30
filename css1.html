@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Projects</title>
+    <style>
+        body{
+            font-family: Arial;    
+        }
+       .sub-button{
+        border: none;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;    
+        }
+        .is-subscribed{
+            color: black;
+            background-color: rgb(240,240,240);
+        }
+
+    </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe()" class="js-sub-button sub-button" >
+        Subscribe
+    </button>
+    
+    <p>Rock Paper Scrissors</p>
+    <button onclick="playGame('rock')">Rock</button>
+    <button onclick="playGame('paper')">Paper</button>
+    <button onclick="playGame('scissors')">Scissors</button>
+    <p class = "js-result"></p>
+    <p class = "js-moves"></p>
+    <p class = "js-score"></p>
+    <button onclick="resetScore(); localStorage.removeItem('score');">Reset Score</button>
+    <script src="Domprojects.js"></script>
+
+    
+</body>
+</html>

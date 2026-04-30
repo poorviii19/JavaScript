@@ -3,12 +3,15 @@ function subscribe(){
 
         if(buttonElement.innerText === 'Subscribe'){
             buttonElement.innerHTML = 'Subscribed';
+            buttonElement.classList.add('is-subscribed');   //when the button will be clicked it will add this class to it
         }else{
             buttonElement.innerHTML = 'Subscribe';
+            buttonElement.classList.remove('is-subscribed');
+            //it will remove the class when it will be clicked again
         }
 }
 
-
+// .classList gives us control of the clas attribute
 // Get score from localStorage or initialize
 let score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,

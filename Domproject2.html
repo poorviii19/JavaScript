@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .cost-input{
+            font-size: 15px;
+            padding: 10px;
+
+        }
+        .btn{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping</p>
     <p>Orders over $40 = FREE shipping</p>
-    <input placeholder = "Cost of order" class = "js-input" onkeydown = "
+    <input placeholder = "Cost of order" class = "js-input cost-input" onkeydown = "
     handleCostKeyDown(event);
     ">
 
@@ -22,7 +38,7 @@
      every eventlistener gets an event object-->
     <button onclick = "
         calculate();
-    ">Calculate</button>
+    " class = "btn">Calculate</button>
     <p class = "js-cost"></p>
     <script src = "Domproject2.js"></script>
 </body>
